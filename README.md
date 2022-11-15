@@ -1,2 +1,3 @@
 # vim-config
-Collections of vim stuff 
+Personal VIM configurations for general use.
+
