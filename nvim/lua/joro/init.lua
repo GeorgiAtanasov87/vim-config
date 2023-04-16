@@ -1,0 +1,7 @@
+require("joro.remap")
+require("joro.packer")
+require("joro.set")
+require("joro.harpoon")
+require("joro.undotree")
+require("joro.fugitive")
+require("joro.lsp")
