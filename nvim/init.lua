@@ -1,2 +1,2 @@
 require("joro")
-require("nvim-treesitter.install").prefer_git
+require("nvim-treesitter.install").prefer_git = true
