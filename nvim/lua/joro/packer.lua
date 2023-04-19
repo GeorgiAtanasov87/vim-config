@@ -48,4 +48,8 @@ return require('packer').startup(function(use)
           {'rafamadriz/friendly-snippets'}, -- Optional
       }
   }
-  end)
+  -- Automatically set up configuration after cloning packer.nvim
+  if packer_bootstrap then
+    require('packer').sync()
+  end
+end)
