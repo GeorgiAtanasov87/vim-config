@@ -1,6 +1,7 @@
 FROM ubuntu:rolling
 
-RUN apt update && apt install software-properties-common build-essential gcc cmake -y
+RUN apt update && apt install -y software-properties-common \
+  build-essential gcc cmake npm python3-venv
 
 RUN apt-get install -y ninja-build gettext cmake unzip curl git
 WORKDIR /root
@@ -12,7 +13,7 @@ RUN git clone https://github.com/neovim/neovim && cd /root/neovim && \
 RUN apt-get update && apt-get install tree ripgrep exuberant-ctags -y
 
 RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 RUN mkdir -p /root/.config/nvim
 
 COPY ./nvim/ /root/.config/nvim/
