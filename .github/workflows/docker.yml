@@ -16,3 +16,7 @@ jobs:
     - name: docker build
       run: |
         docker build . -t georgiatanasov87/vim:0.9.0
+    - name: docker push
+      run: |
+        docker push georgiatanasov87/vim:0.9.0
+        
