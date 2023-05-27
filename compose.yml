@@ -1,6 +1,7 @@
 version: "3.9"
 services:
   vim:
+    image: georgiatanasov87/vim:0.9.0
     build: .
     stdin_open: true
     tty: true
