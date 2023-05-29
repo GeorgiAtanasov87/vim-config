@@ -20,4 +20,6 @@ COPY ./nvim/ /root/.config/nvim/
 
 RUN nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
+RUN npm i -g pyright
+
 ENTRYPOINT [ "/bin/bash" ]
