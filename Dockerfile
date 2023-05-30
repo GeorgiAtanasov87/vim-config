@@ -1,7 +1,7 @@
 FROM ubuntu:rolling
 
 RUN apt update && apt install -y software-properties-common \
-  build-essential gcc cmake npm python3-venv
+  build-essential gcc cmake npm python3-venv python3-pip python3-pylsp
 
 RUN apt-get install -y ninja-build gettext cmake unzip curl git
 WORKDIR /root
@@ -19,5 +19,7 @@ RUN mkdir -p /root/.config/nvim
 COPY ./nvim/ /root/.config/nvim/
 
 RUN nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+
+RUN npm i -g pyright
 
 ENTRYPOINT [ "/bin/bash" ]

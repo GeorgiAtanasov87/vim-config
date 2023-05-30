@@ -1,5 +1,22 @@
 local lsp = require("lsp-zero")
 
+require'lspconfig'.pyright.setup{
+    
+-- require'lspconfig'.pylsp.setup{}
+-- local lspconfig = require('lspconfig')
+-- lspconfig.pylsp.setup {
+-- 	settings = {
+-- 		pylsp = {
+-- 			plugins = {
+-- 				ruff = {
+-- 					enabled = true,
+-- 					extendSelect = { "I" },
+-- 				},
+-- 			}
+-- 		}
+-- 	}
+-- }   
+
 lsp.preset("recommended")
 lsp.ensure_installed({
     'pylsp',
