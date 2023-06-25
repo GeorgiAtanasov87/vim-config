@@ -15,7 +15,7 @@ require'lspconfig'.pyright.setup{
 -- 			}
 -- 		}
 -- 	}
--- }   
+}   
 
 lsp.preset("recommended")
 lsp.ensure_installed({
