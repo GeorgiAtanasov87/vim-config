@@ -23,6 +23,7 @@ RUN nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 RUN npm i -g pyright
 
 RUN nvim --headless -c 'TSInstall python' -c qall
+RUN nvim --headless -c '!sleep 60' -c qall
 
 RUN nvim --headless -c "LspInstall pylsp" -c qall
 RUN nvim --headless -c "MasonInstall flake8" -c qall
